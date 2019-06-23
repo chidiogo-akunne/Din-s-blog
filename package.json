@@ -1,0 +1,22 @@
+{
+  "name": "din-s-blog",
+  "version": "1.0.0",
+  "description": "probation project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chidiogo-akunne/Din-s-blog.git"
+  },
+  "author": "chidiogo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chidiogo-akunne/Din-s-blog/issues"
+  },
+  "homepage": "https://github.com/chidiogo-akunne/Din-s-blog#readme",
+  "dependencies": {
+    "jest": "^24.8.0"
+  }
+}
