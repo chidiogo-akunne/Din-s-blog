@@ -1,0 +1,11 @@
+
+ .menu{
+    float: right;
+    margin: 0;
+}
+.nav-style {
+    background-color: transparent;
+    border-bottom: 1px solid #ececec;
+    min-height: 50px;
+    height: auto;
+  }
