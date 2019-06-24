@@ -118,5 +118,11 @@ function createPost(newData) {
         $('input#editContent2').val(posts.content2);
     }
   })
+  $('#editForm').delegate('.update', 'click', function() {
+    let editedData = {
+      title: $('#editTitle1').val(),
+      description:  $('editDescription1').val(),
+      author:  $('#editAuthor1').val()
+    }
 
 });
