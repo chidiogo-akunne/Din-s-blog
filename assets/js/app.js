@@ -63,7 +63,7 @@ $(document).ready(function(){
     }
     createPost(data); 
   $('#createPost').trigger('reset');//reset the form
-  $('#createPost').show();// the form will still be there
+  $('#createPost').show();// the toggles the form back after rest
   e.preventDefault();
 });
 //send data collected to database
@@ -87,8 +87,18 @@ function createPost(newData) {
     });
   };
 
-
-
+//deletes a single form
+$('#table-body').delegate('.deletePost', 'click', function(){
+    alert('Are you sure you want to delete this post?');
+    var  $tr = $(this).closest('tr');
+    $.ajax({
+        type: 'DELETE',
+        url: 'http://localhost:3000/posts/' + $(this).attr('data-id'),
+        success: function(){
+            $tr.remove();
+      }
+      })
+    });
 
 
 });
