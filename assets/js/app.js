@@ -53,17 +53,37 @@ $(document).ready(function(){
   });
 
   //create new posts
-  $('#submitPost').on('click', function(e) {
+  $('#submitPost').on('click', function(e) { // collect the values of data entered
     let data = {
       title: $('#title1').val(),
       author: $('#author1').val(),
       description: $('#description1').val()
     }
     createPost(data); 
-  $('#createPost').trigger('reset');
-  $('#createPost').show();
+  $('#createPost').trigger('reset');//reset the form
+  $('#createPost').show();// the form will still be there
   e.preventDefault();
 });
+//send data collected to database
+function createPost(newData) {
+    $.ajax({
+      url: 'http://localhost:3000/posts',
+      method: 'POST',
+      data: newData,
+      success: function(newPost) {
+        $('#table-body').append($(`<tr data-id='${newPost.id}'>`)
+            .append($('<td>').append(newPost.id))
+            .append($('<td>').append(newPost.title))
+            .append($('<td>').append(newPost.author))
+            .append($('<td>').append(newPost.description))
+            .append($("<td>").append(`
+              <button class='deletePost' data-id='${newPost.id}'> Delete</button>
+              <button class='editPost noEdit' data-id='${newPost.id}'> Edit</button>
+            `))
+        )
+      }
+    });
+  };
 
 
 
