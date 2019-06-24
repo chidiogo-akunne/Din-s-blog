@@ -105,5 +105,18 @@ function createPost(newData) {
  function goToEdit(postid) {
     sessionStorage.setItem('postid', postid);//onclick of the edit button, the data id will be retrieved 
   }
+  // data value will retrieved from database and passed into edit form
+  function getPostData() {
+    $.ajax({
+      url: 'http://localhost:3000/posts/' + sessionStorage.getItem('postid'),
+      method: 'GET',
+      success: function(posts) {
+        $('input#editTitle1').val(posts.title);
+        $('input#editAuthor1').val(posts.author);
+        $('input#editDescription1').val(posts.description);
+        $('input#editContent1').val(posts.content1);
+        $('input#editContent2').val(posts.content2);
+    }
+  })
 
 });
