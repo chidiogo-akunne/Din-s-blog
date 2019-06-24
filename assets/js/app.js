@@ -89,7 +89,8 @@ function createPost(newData) {
 
 //deletes a single form
 $('#table-body').delegate('.deletePost', 'click', function(){
-
+    alert('Are you sure you want to delete this post?');
+    var  $tr = $(this).closest('tr');
 
 
 });
