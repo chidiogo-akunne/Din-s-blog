@@ -18,5 +18,7 @@
   "homepage": "https://github.com/chidiogo-akunne/Din-s-blog#readme",
   "dependencies": {
     "jest": "^24.8.0"
-  }
+  },
+  "devDependencies": {},
+  "keywords": []
 }

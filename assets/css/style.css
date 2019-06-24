@@ -64,3 +64,85 @@ background-size: cover;
     text-align: center;
     padding: 15px 0;
 }
+.admin-bg{
+    background-color: #e4dede;
+  }
+  
+   .admin-ul, .article-left{
+    min-height: 38rem;
+    margin: 0;
+  }
+  
+  .article-right{
+    background-color: #FFF;
+    padding-top: 30px;
+  }
+
+  .admin-ul{
+    text-transform: Uppercase;
+    font-size: 1.8em;
+    padding: 15px;
+  }
+  
+  .fa-ul a{
+    color: #000;
+    font-weight: 500;
+  }
+  
+  a:hover{
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .admin-h1{
+    font-size:3em;
+    color: #333;
+    padding-top: 15px;
+  }
+  
+  .admin-h2{
+     background-color: transparent;
+     padding: 15px;
+  }
+  
+  .admin-title{
+    background-color: #f7f7f7;
+    padding: 10px;
+  }
+  
+  .admin-h3{
+    color: #000;
+  }
+  
+  .fa{
+    padding-right: 20px;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .fa-heart{
+    padding-left: 70px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  .admin-li{
+      padding-top: 25px;
+      padding-bottom: 25px;
+  }
+
+  .table-header{
+    background: #e4dede;
+    color:#333;
+}
+.cell{
+    padding:20px;
+}
+@media screen and (max-width: 640px){
+    table {
+        overflow-x: auto;
+        display: block;
+    }
+    .table-header .cell{
+        padding:20px 5px;
+    }
+}
