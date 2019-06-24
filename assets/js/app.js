@@ -131,4 +131,25 @@ function createPost(newData) {
     e.preventDefault();
   });
 
+  function newEdit(edit){
+    $.ajax({
+          type:'PUT',
+          data: editedData,
+          url: 'http://localhost:3000/posts/' + sessionStorage.getItem('postid'),
+          success: function (editedPost){
+            // $('#table-body').append($(`<tr data-id='${editedPost.id}'>`)
+            //   .append($('<td>').append(editedPost.id))
+            //   .append($('<td>').append(editedPost.title))
+            //   .append($('<td>').append(editedPost.author))
+            //   .append($('<td>').append(editedPost.description))
+            //   .append($("<td>").append(`
+            //     <button class='deletePost' data-id='${editedPost.id}'> Delete</button>
+            //     <button class='editPost noEdit' data-id='${editedPost.id}'> Edit</button>
+            //   `))
+            // )
+          }
+        })
+      }
+    }
+
 });
