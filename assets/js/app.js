@@ -102,5 +102,8 @@ function createPost(newData) {
  
 
  //update post
+ function goToEdit(postid) {
+    sessionStorage.setItem('postid', postid);//onclick of the edit button, the data id will be retrieved 
+  }
 
 });
