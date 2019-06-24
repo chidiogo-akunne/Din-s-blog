@@ -91,6 +91,14 @@ function createPost(newData) {
 $('#table-body').delegate('.deletePost', 'click', function(){
     alert('Are you sure you want to delete this post?');
     var  $tr = $(this).closest('tr');
+    $.ajax({
+        type: 'DELETE',
+        url: 'http://localhost:3000/posts/' + $(this).attr('data-id'),
+        success: function(){
+            $tr.remove();
+      }
+      })
+    });
 
 
 });
