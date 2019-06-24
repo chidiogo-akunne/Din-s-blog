@@ -118,11 +118,17 @@ function createPost(newData) {
         $('input#editContent2').val(posts.content2);
     }
   })
+  //take new values from form
   $('#editForm').delegate('.update', 'click', function() {
     let editedData = {
       title: $('#editTitle1').val(),
       description:  $('editDescription1').val(),
       author:  $('#editAuthor1').val()
     }
+    newEdit(editedData);
+    $('#editForm').trigger('reset');//resets the form field after you submit post
+    $('#editForm').show(); // toggles the form back after it resets
+    e.preventDefault();
+  });
 
 });
