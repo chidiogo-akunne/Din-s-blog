@@ -59,6 +59,11 @@ $(document).ready(function(){
       author: $('#author1').val(),
       description: $('#description1').val()
     }
+    createPost(data); 
+  $('#createPost').trigger('reset');
+  $('#createPost').show();
+  e.preventDefault();
+});
 
 
 
