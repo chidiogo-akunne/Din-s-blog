@@ -52,6 +52,13 @@ $(document).ready(function(){
     }
   });
 
+  //create new posts
+  $('#submitPost').on('click', function(e) {
+    let data = {
+      title: $('#title1').val(),
+      author: $('#author1').val(),
+      description: $('#description1').val()
+    }
 
 
 
