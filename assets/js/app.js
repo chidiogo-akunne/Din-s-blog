@@ -44,8 +44,8 @@ $(document).ready(function(){
             .append($('<td>').append(`${post.description}`))
             .append($('<td>').append(`${post.author}`))
             .append($("<td>").append(`
-            <button class='deletePost' data-id='${post.id}'> Delete</button>
-            <button onclick="goToEdit('${post.id}')" class='editPost noEdit' data-id='${post.id}'> Edit</button>
+            <button class='deletePost btn-danger' data-id='${post.id}'> Delete</button>
+            <button onclick="goToEdit('${post.id}')" class='editPost btn-primary' data-id='${post.id}'> Edit</button>
           `))
           );
       });
