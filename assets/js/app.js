@@ -57,7 +57,9 @@ $(document).ready(function(){
     let data = {
       title: $('#title1').val(),
       author: $('#author1').val(),
-      description: $('#description1').val()
+      description: $('#description1').val(),
+      content1: $('#content1').val(),
+      content2: $('content2').val()
     }
     createPost(data); 
   $('#createPost').trigger('reset');//reset the form
