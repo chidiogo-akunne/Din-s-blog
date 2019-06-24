@@ -45,7 +45,8 @@ $(document).ready(function(){
             .append($('<td>').append(`${post.author}`))
             .append($("<td>").append(`
             <button class='deletePost btn-danger' data-id='${post.id}'> Delete</button>
-            <button onclick="goToEdit('${post.id}')" class='editPost btn-primary' data-id='${post.id}'> Edit</button>
+            <a href="update.html" onclick="goToEdit('${post.id}')" class='editPost noEdit' data-id='${post.id}'> Edit</a>
+
           `))
           );
       });
@@ -87,8 +88,8 @@ function createPost(newData) {
     });
   };
 
-//deletes a single form
-$('#table-body').delegate('.deletePost', 'click', function(){
+ //deletes a single post
+ $('#table-body').delegate('.deletePost', 'click', function(){
     alert('Are you sure you want to delete this post?');
     var  $tr = $(this).closest('tr');
     $.ajax({
@@ -99,6 +100,60 @@ $('#table-body').delegate('.deletePost', 'click', function(){
       }
       })
     });
+  });
 
 
-});
+ //update post
+ function goToEdit(postid) {
+  sessionStorage.setItem('postid', postid);
+}
+
+function getPostData() {
+ $.ajax({
+   url: 'http://localhost:3000/posts/' + sessionStorage.getItem('postid'), 
+   method: 'GET',
+   success: function(posts) {
+     $('input#editTitle1').val(posts.title);
+     $('input#editAuthor1').val(posts.author);
+     $('input#editDescription1').val(posts.description);
+     $('input#editContent1').val(posts.content1);
+     $('input#editContent2').val(posts.content2);
+ }
+})
+  //take new values from form
+  $('#update').on('click', function(e) {
+    let data = {
+      title: $('#editTitle1').val(),
+      author:  $('#editAuthor1').val(),
+      description:  $('editDescription1').val()
+    }
+
+  
+    editForm(data);
+    $('#editForm').trigger('reset');//resets the form field after you submit post
+    $('#editForm').show(); // toggles the form back after it resets
+    e.preventDefault();
+  });
+
+  function editForm(edit){
+  $.ajax({
+        type:'PUT',
+        data: edit,
+        url: 'http://localhost:3000/posts/' + sessionStorage.getItem('postid'),
+        success: function (editedPost){
+          $('#table-body').append($(`<tr data-id='${editedPost.id}'>`)
+            .append($('<td>').append(editedPost.id))
+            .append($('<td>').append(editedPost.title))
+            .append($('<td>').append(editedPost.author))
+            .append($('<td>').append(editedPost.description))
+            .append($("<td>").append(`
+              <button class='deletePost' data-id='${editedPost.id}'> Delete</button>
+              <button class='editPost noEdit' data-id='${editedPost.id}'> Edit</button>
+            `))
+            
+          )
+        }
+      })
+    }
+
+}
