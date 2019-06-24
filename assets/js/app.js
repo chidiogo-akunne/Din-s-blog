@@ -31,5 +31,30 @@ function validatesignup(){
 
 
 $(document).ready(function(){
-   
+   //list out all post on a table
+   $.ajax({
+    url: 'http://localhost:3000/posts',
+    method: 'GET',
+    dataType: 'json',
+    success: function(data) {
+      $(data).each(function(i, post) {
+        $('#table-body').append($('<tr>')
+            .append($('<td>').append(post.id))
+            .append($('<td>').append(`${post.title}`))
+            .append($('<td>').append(`${post.description}`))
+            .append($('<td>').append(`${post.author}`))
+            .append($("<td>").append(`
+            <button class='deletePost' data-id='${post.id}'> Delete</button>
+            <button onclick="goToEdit('${post.id}')" class='editPost noEdit' data-id='${post.id}'> Edit</button>
+          `))
+          );
+      });
+    }
+  });
+
+
+
+
+
+
 });
