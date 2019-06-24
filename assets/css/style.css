@@ -129,3 +129,20 @@ background-size: cover;
       padding-top: 25px;
       padding-bottom: 25px;
   }
+
+  .table-header{
+    background: #e4dede;
+    color:#333;
+}
+.cell{
+    padding:20px;
+}
+@media screen and (max-width: 640px){
+    table {
+        overflow-x: auto;
+        display: block;
+    }
+    .table-header .cell{
+        padding:20px 5px;
+    }
+}
