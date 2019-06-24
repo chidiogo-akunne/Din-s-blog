@@ -87,7 +87,7 @@ function createPost(newData) {
     });
   };
 
-//deletes a single form
+//deletes a single post
 $('#table-body').delegate('.deletePost', 'click', function(){
     alert('Are you sure you want to delete this post?');
     var  $tr = $(this).closest('tr');
