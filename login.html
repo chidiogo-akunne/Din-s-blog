@@ -14,9 +14,9 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     </head>
-    <body>
-        <header>
-            <nav class="navbar-expand-lg nav-style">
+    <body class="login-bg" style="background-image:url('images/branches.png'); background-size: auto;">
+        <header class="header-style">
+            <nav class="navbar-expand-lg nav-style  container">
                     <a class="navbar-brand" href="home.html">DIN</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,7 @@
                     <div class="collapse navbar-collapse menu">
                       <ul class="nav justify-content-end">
                         <li class="nav-item active">
-                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="about.html">ABOUT</a>
@@ -38,14 +38,15 @@
                   </header>
                   <main>
                         <div class="container">
-                                <div class="main">
-                                <h2>Log In</h2>
+                            <div class="mainlogin-form">
+                                <h2 class="login-title">Log In</h2>
                                 <form id="login_id" method="post" name="mylogin">
-                                <input type="text" name="username" id="username" placeholder="enter username"/>
-                                <input type="password" name="password" id="password" placeholder="enter your password"/>
-                                <input type="button" value="Login" id="submit" onclick="validatelogin()"/>
+                                <input class="login-input" type="text" name="username" id="username" placeholder="enter username"/>
+                                <input class="login-input" type="password" name="password" id="password" placeholder="enter your password"/>
+                                <a href="admin.html" class="btn btn-sm login-btn" value="Login" id="submit" onclick="validatelogin()"> Login</a>
                                 </form>
-                                <span>Don't have an account? <a href="signup.html">Sign Up</a></span>
+                                <span>Don't have an account? 
+                                    <a href="signup.html">Sign Up</a></span>
                                 </div>
                                 </div>
                   </main>
