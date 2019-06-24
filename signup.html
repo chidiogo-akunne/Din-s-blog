@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     </head>
+    <body class="login-bg" style="background-image:url('images/branches.png'); background-size: auto;">
     <header class="header-style">
             <nav class="navbar-expand-lg nav-style  container">
                     <a class="navbar-brand" href="home.html">DIN</a>
@@ -35,6 +36,23 @@
                     </div>
                   </nav>
                   </header>
+                  <main>
+                        <div class="container">
+                            <div class="mainlogin-form">
+                                <h2 class="login-title">Sign Up</h2>
+                                <form id="login_id" method="post" name="mylogin">
+                                <input class="login-input" type="text" name="username" id="username" placeholder="enter username" required/>
+                                <input class="login-input" type="text" name="firstname" id="firstname" placeholder="enter firstname" required/>
+                                <input class="login-input" type="text" name="lastname" id="lastname" placeholder="enter lastname" required/>
+                                <input class="login-input" type="email" name="email" id="email" placeholder="enter email" required/>
+                                <input class="login-input" type="password" name="password" id="password" placeholder="enter your password" required/>
+                                <button class="btn btn-sm login-btn" value="Login" id="submit" onclick="validatesignup()"> Login</button>
+                                </form>
+                                <span>Already have an account? 
+                                    <a href="login.html">Log In</a></span>
+                                </div>
+                                </div>
+                  </main>
 
 
 
