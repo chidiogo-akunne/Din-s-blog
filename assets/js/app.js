@@ -115,6 +115,21 @@ function createPost(newData) {
     $('#contactForm').show();
     e.preventDefault();
     })
+    function createContact(contactData) {
+      $.ajax({
+        url: 'http://localhost:3000/contacts',
+        method: 'POST',
+        data: contactData,
+        success: function() {
+          alert('Message sent successfully, we will get back to you soon!');
+          console.log(contactData);
+        }
+      });
+    }
+
+  });
+
+
     
     
  //update post
