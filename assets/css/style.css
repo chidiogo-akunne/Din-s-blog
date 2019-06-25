@@ -250,3 +250,17 @@ background-repeat: no-repeat;
 .about_content_box_all {
   padding: 28px;
 }
+.home-header{
+  height: 70vh;
+  background-image:url('http://source.unsplash.com/OJX7gIU3E6U');
+background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+background-color:#323232;
+}
+   .header-h1{
+            line-height: 40vh;
+            color: #fff;
+            text-align: center;
+            font-style: italic; 
+        }
