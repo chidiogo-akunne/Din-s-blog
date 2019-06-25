@@ -279,4 +279,50 @@ background-color:#323232;
           .footer-h1{
               color: #2F2F2F;;
           }
+
+          .rm-brand{
+            text-align: center;
+            font-family: 'Chalkduster', serif;
+            font-size: 70px;
+            margin-top: 20px;
+            color: black;
+          }
+          
+          .rm-header {
+            display: inline-block;
+            width: 100%;
+            height: 80px;
+            padding: 16px;
+            text-align: center;
+          }
+          
+          .rm-header > .nav > a {
+            display: inline-block;
+            padding: 16px;
+            font-family:'Times New Roman', sans-serif;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
+          }
+          
+          .picture {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 40%;
+            
+          }
+          
+          .readmore {
+            text-align: center;
+            width: 60%;
+            margin-left: 20%;
+            font-size: 18px;
+            margin-top: 30px;
+          }
+          .readmore > span{
+            color: black;
+            line-height: 25px;
+          }
+          
       
