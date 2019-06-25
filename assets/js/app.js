@@ -100,9 +100,17 @@ function createPost(newData) {
       }
       })
     });
-  });
 
+    //contact us
 
+  $('#contact-us').on('click', function(e) {
+    let data = {
+      name: $('#contact-name').val(),
+      email: $('#contact-email').val(),
+      number: $('#contact-number').val(),
+      message: $('#contact-message').val()
+    }
+    
  //update post
  function goToEdit(postid) {
   sessionStorage.setItem('postid', postid);

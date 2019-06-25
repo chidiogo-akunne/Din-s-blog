@@ -54,9 +54,17 @@
   "contacts": [
     {
       "id": 1,
-      "body": "some comment",
-      "fullname": "chidiogo",
-      "email": "chi@gmail.com"
+      "message": "some comment",
+      "name": "chidiogo",
+      "email": "chi@gmail.com",
+      "number": 43546576879
+    },
+    {
+      "name": "chidiogo akunne",
+      "email": "chi@ya.vom",
+      "number": "456789",
+      "message": "fdghjklkjmhnbgvfdcvfbnhmj,k",
+      "id": 2
     }
   ],
   "comments": [
