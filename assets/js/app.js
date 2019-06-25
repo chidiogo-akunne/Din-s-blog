@@ -110,6 +110,12 @@ function createPost(newData) {
       number: $('#contact-number').val(),
       message: $('#contact-message').val()
     }
+    createContact(data);
+    $('#contactForm').trigger('reset');
+    $('#contactForm').show();
+    e.preventDefault();
+    })
+    
     
  //update post
  function goToEdit(postid) {
