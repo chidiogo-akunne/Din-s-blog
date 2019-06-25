@@ -100,9 +100,38 @@ function createPost(newData) {
       }
       })
     });
+
+    //contact us
+
+  $('#contact-us').on('click', function(e) {
+    let data = {
+      name: $('#contact-name').val(),
+      email: $('#contact-email').val(),
+      number: $('#contact-number').val(),
+      message: $('#contact-message').val()
+    }
+    createContact(data);
+    $('#contactForm').trigger('reset');
+    $('#contactForm').show();
+    e.preventDefault();
+    })
+    function createContact(contactData) {
+      $.ajax({
+        url: 'http://localhost:3000/contacts',
+        method: 'POST',
+        data: contactData,
+        success: function() {
+          alert('Message sent successfully, we will get back to you soon!');
+          console.log(contactData);
+        }
+      });
+    }
+
   });
 
 
+    
+    
  //update post
  function goToEdit(postid) {
   sessionStorage.setItem('postid', postid);

@@ -155,3 +155,38 @@ background-size: cover;
     margin-top: 20px;
     padding: 20px
 }
+
+.contact-us {
+  background: url("http://www.dentons.com/~/media/Images/Website/Background%20Images/Landing%20Pages/Whats%20Different%20About%20Dentons/Contact%20us/contact3.jpg") no-repeat center fixed;
+  background-size: cover;
+  color: #fff;
+  height: auto;
+  background-position: center; 
+background-repeat: no-repeat;
+}
+
+.contact-us .fields {
+  min-height: 300px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 2%;
+}
+
+.contact-us p {
+  margin-bottom: 40px;
+  margin-top: 7px;
+}
+
+.contact-us .contact-textarea {
+  height: 108px;
+}
+
+.contact-us .input-text, .contact-us .contact-textarea {
+  background: #fff;
+  border: none;
+  color: #000;
+}
+
+.contact-form{
+  padding: 20px;
+}
