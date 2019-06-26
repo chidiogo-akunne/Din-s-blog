@@ -139,6 +139,7 @@ $.ajax({
       $('#commentSection').append($('<span>')
       .append($('<p class="comment-author">').append(comment.readerid))
       .append($('<p class="comment-content">').append(comment.commentbody)) 
+      .append($('<p class="comm-hr">').append('<hr/>'))
       );
     });
   }
@@ -154,6 +155,21 @@ $('#submitComment').on('click', function(e) {
   $('#commentForm').show();
   e.preventDefault();
   })
+
+  function createC(newData) {
+    $.ajax({
+      url: 'http://localhost:3000/comments',
+      method: 'POST',
+      data: newData,
+      success: function(newComment) {
+        $('#commentSection').append($('<span>')
+        .append($('<p class="comment-author">').append(comment.readerid))
+        .append($('<p class="comment-content">').append(comment.commentbody))
+        .append($('<p class="comm-hr">').append('<hr/>'))
+      )
+      }
+    });
+  }
 
   });
 
