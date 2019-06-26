@@ -172,7 +172,51 @@ $('#submitComment').on('click', function(e) {
   }
 
  
-
+//display all post
+$.ajax({
+  url: 'http://localhost:3000/posts',
+  method: 'GET',
+  dataType: 'json',
+  success: function(data) {
+    $(data).each(function(i, post) {
+      $('#allPost').append($('<div class="card-deck container mt-5 mb-5">')
+      .append($('<div class="card">')
+        .append(`
+              <img alt="picture" src="https://image.freepik.com/free-vector/dark-background-overlap-layer-with-silver-glitters_67845-307.jpg" width="100%" height="150px">
+        <div class="card-body">
+          <h4 class="card-title">${post.title}</h4>
+          <h6 class="card-author">${post.author}</h6>
+          <p class="card-text">${post.description}</p>
+          <a href="readmore.html" type="button" class="btn btn-primary" data-id='${post.id}'>Read More...</a>
+        </div>
+  </div>
+  `))
+  .append($('<div class="card">')
+        .append(`
+              <img alt="picture" src="https://image.freepik.com/free-vector/dark-background-overlap-layer-with-silver-glitters_67845-307.jpg" width="100%" height="150px">
+        <div class="card-body">
+          <h4 class="card-title">${post.title}</h4>
+          <h6 class="card-author">${post.author}</h6>
+          <p class="card-text">${post.description}</p>
+          <a href="readmore.html" type="button" class="btn btn-primary" data-id='${post.id}'>Read More...</a>
+        </div>
+  </div>
+  `))
+  .append($('<div class="card">')
+        .append(`
+              <img alt="picture" src="https://image.freepik.com/free-vector/dark-background-overlap-layer-with-silver-glitters_67845-307.jpg" width="100%" height="150px">
+        <div class="card-body">
+          <h4 class="card-title">${post.title}</h4>
+          <h6 class="card-author">${post.author}</h6>
+          <p class="card-text">${post.description}</p>
+          <a href="readmore.html" type="button" class="btn btn-primary" data-id='${post.id}'>Read More...</a>
+        </div>
+  </div>
+  `))
+      )
+    });
+  }
+});
   });
 
 
