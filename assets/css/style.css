@@ -314,11 +314,11 @@ background-color:#323232;
           }
           
           .readmore {
-            text-align: center;
             width: 60%;
             margin-left: 20%;
             font-size: 18px;
-            margin-top: 30px;
+            margin-top: 5%;
+            margin-bottom: 10%;
           }
           .readmore > span{
             color: black;
