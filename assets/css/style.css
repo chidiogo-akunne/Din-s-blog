@@ -279,4 +279,117 @@ background-color:#323232;
           .footer-h1{
               color: #2F2F2F;;
           }
-      
+
+          .rm-brand{
+            text-align: center;
+            font-family: 'Chalkduster', serif;
+            font-size: 70px;
+            margin-top: 20px;
+            color: black;
+          }
+          
+          .rm-header {
+            display: inline-block;
+            width: 100%;
+            height: 80px;
+            padding: 16px;
+            text-align: center;
+          }
+          
+          .rm-header > .nav > a {
+            display: inline-block;
+            padding: 16px;
+            font-family:'Times New Roman', sans-serif;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
+          }
+          
+          .picture {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 40%;
+            
+          }
+          
+          .readmore {
+            width: 60%;
+            margin-left: 20%;
+            font-size: 18px;
+            margin-top: 5%;
+            margin-bottom: 10%;
+          }
+          .readmore > span{
+            color: black;
+            line-height: 25px;
+          }
+          
+          .wrapper{
+            width:400px;
+            margin:10px auto;
+          }
+          
+          fieldset{
+            padding:10px;
+            background:#f7f1f2;
+          }
+          .form_grp{
+            margin-bottom:10px;
+          }
+          .comm-h3{
+            width:100%;
+            height:32px;
+            line-height:32px;
+            display:block;
+            margin-bottom:10px;
+            font-size:18px;
+            color:#020;
+           padding-left:34px; background:url(https://cdn3.iconfinder.com/data/icons/glypho-free/64/pen-checkbox-32.png) no-repeat left center;
+          }
+          .comm-input{
+            width: 100%;
+            padding-left:10px; 
+            border: none;
+          }
+          .comm-textarea{
+            width:100%;
+            height:100px;
+            padding:10px;
+            border:1px solid #eee;
+            resize:none;
+          }
+          .comm-button{
+            padding:5px 20px;
+            background-color:#0e7ec7;
+            color:#fff;
+            float:right;
+          }
+
+          .comm-container {
+            background: #f7f1f2;;
+            padding: 30px;
+            padding-bottom: 0;
+            width: 700px;
+            border-radius: 20px;
+          }
+          
+          .comments-section p {
+            line-height: 5px; }
+          
+          .comments-section .comment-author {
+            font-weight: 400;
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: #cc3642; }
+          
+          .comments-section .comment-content {
+            font-size: 16px;
+            font-weight: 100;
+            padding-bottom: 30px;
+            line-height: 25px;
+            letter-spacing: 1px;
+            margin-bottom: 0;
+          }
+          
+          

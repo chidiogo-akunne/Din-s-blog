@@ -127,6 +127,50 @@ function createPost(newData) {
       });
     }
 
+    // comments
+
+
+$.ajax({
+  url: 'http://localhost:3000/comments',
+  method: 'GET',
+  dataType: 'json',
+  success: function(data) {
+    $(data).each(function(i, comment) {
+      $('#commentSection').append($('<span>')
+      .append($('<p class="comment-author">').append(comment.readerid))
+      .append($('<p class="comment-content">').append(comment.commentbody)) 
+      .append($('<p class="comm-hr">').append('<hr/>'))
+      );
+    });
+  }
+});
+
+$('#submitComment').on('click', function(e) {
+  let data = {
+    readerid : $('#commentername').val(),
+    commentbody : $('#usercomment').val(),
+  }
+  createC(data);
+  $('#commentForm').trigger('reset');
+  $('#commentForm').show();
+  e.preventDefault();
+  })
+
+  function createC(newData) {
+    $.ajax({
+      url: 'http://localhost:3000/comments',
+      method: 'POST',
+      data: newData,
+      success: function(newComment) {
+        $('#commentSection').append($('<span>')
+        .append($('<p class="comment-author">').append(comment.readerid))
+        .append($('<p class="comment-content">').append(comment.commentbody))
+        .append($('<p class="comm-hr">').append('<hr/>'))
+      )
+      }
+    });
+  }
+
   });
 
 
