@@ -149,6 +149,11 @@ $('#submitComment').on('click', function(e) {
     readerid : $('#commentername').val(),
     commentbody : $('#usercomment').val(),
   }
+  createC(data);
+  $('#commentForm').trigger('reset');
+  $('#commentForm').show();
+  e.preventDefault();
+  })
 
   });
 
