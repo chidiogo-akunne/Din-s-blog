@@ -365,3 +365,31 @@ background-color:#323232;
             color:#fff;
             float:right;
           }
+
+          .comm-container {
+            background: #f7f1f2;;
+            padding: 30px;
+            padding-bottom: 0;
+            width: 700px;
+            border-radius: 20px;
+          }
+          
+          .comments-section p {
+            line-height: 5px; }
+          
+          .comments-section .comment-author {
+            font-weight: 400;
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: #cc3642; }
+          
+          .comments-section .comment-content {
+            font-size: 16px;
+            font-weight: 100;
+            padding-bottom: 30px;
+            line-height: 25px;
+            letter-spacing: 1px;
+            margin-bottom: 0;
+          }
+          
+          
