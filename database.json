@@ -70,8 +70,8 @@
   "comments": [
     {
       "id": 1,
-      "body": "some comment",
-      "posterId": "din"
+      "commentbody": "some comment",
+      "readerid": "din"
     }
   ],
   "profile": {

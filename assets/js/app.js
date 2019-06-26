@@ -127,6 +127,24 @@ function createPost(newData) {
       });
     }
 
+    // comments
+
+
+$.ajax({
+  url: 'http://localhost:3000/comments',
+  method: 'GET',
+  dataType: 'json',
+  success: function(data) {
+    $(data).each(function(i, comment) {
+      $('#commentSection').append($('<span>')
+      .append($('<p class="comment-author">').append(comment.readerid))
+      .append($('<p class="comment-content">').append(comment.commentbody)) 
+      );
+    });
+  }
+}); 
+
+
   });
 
 
