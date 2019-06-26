@@ -142,8 +142,13 @@ $.ajax({
       );
     });
   }
-}); 
+});
 
+$('#submitComment').on('click', function(e) {
+  let data = {
+    readerid : $('#commentername').val(),
+    commentbody : $('#usercomment').val(),
+  }
 
   });
 
