@@ -60,7 +60,7 @@ $(document).ready(function(){
       author: $('#author1').val(),
       description: $('#description1').val(),
       content1: $('#content1').val(),
-      content2: $('content2').val()
+      content2: $('#content2').val()
     }
     createPost(data); 
   $('#createPost').trigger('reset');//reset the form
@@ -187,7 +187,7 @@ $.ajax({
           <h4 class="card-title">${post.title}</h4>
           <h6 class="card-author">${post.author}</h6>
           <p class="card-text">${post.description}</p>
-          <a href="readmore.html" type="button" class="btn btn-primary" data-id='${post.id}'>Read More...</a>
+          <a href="readmore.html" type="button" onclick="goToPost('${post.id}') id="readmore" class="btn btn-primary" data-id='${post.id}'>Read More...</a>
         </div>
   </div>
   `))
@@ -198,7 +198,7 @@ $.ajax({
           <h4 class="card-title">${post.title}</h4>
           <h6 class="card-author">${post.author}</h6>
           <p class="card-text">${post.description}</p>
-          <a href="readmore.html" type="button" class="btn btn-primary" data-id='${post.id}'>Read More...</a>
+          <a href="readmore.html" type="button" onclick="goToPost('${post.id}') class="btn btn-primary" id="readmore" data-id='${post.id}'>Read More...</a>
         </div>
   </div>
   `))
@@ -209,7 +209,7 @@ $.ajax({
           <h4 class="card-title">${post.title}</h4>
           <h6 class="card-author">${post.author}</h6>
           <p class="card-text">${post.description}</p>
-          <a href="readmore.html" type="button" class="btn btn-primary" data-id='${post.id}'>Read More...</a>
+          <a href="readmore.html" onclick="goToPost('${post.id}') type="button" class="btn btn-primary" id="readmore" data-id='${post.id}'>Read More...</a>
         </div>
   </div>
   `))
@@ -217,10 +217,9 @@ $.ajax({
     });
   }
 });
-  });
 
 
-    
+});  
     
  //update post
  function goToEdit(postid) {
@@ -231,6 +230,7 @@ function getPostData() {
  $.ajax({
    url: 'http://localhost:3000/posts/' + sessionStorage.getItem('postid'), 
    method: 'GET',
+   dataType: 'json',
    success: function(posts) {
      $('input#editTitle1').val(posts.title);
      $('input#editAuthor1').val(posts.author);
@@ -276,3 +276,31 @@ function getPostData() {
     }
 
 }
+ //read single post
+ function goToPost(postid) {
+  sessionStorage.setItem('postid', postid);
+}
+  function getSinglePost(){
+    $.ajax({
+      url: 'http://localhost:3000/posts/' + sessionStorage.getItem('postid'), 
+      method: 'GET',
+      dataType: 'json',
+      success: function(post) {
+          $('#singlePost').append($('<div>')
+          .append($('<h2>').append(`
+              <span>${post.title}</span>
+          `))
+          .append($('<p>').append(`
+              <span>${post.content1}</span>
+          `))
+          .append($('<p>').append(`
+              <span>${post.content2}</span>
+          `))
+          )
+       }
+      
+
+
+  });
+}
+
