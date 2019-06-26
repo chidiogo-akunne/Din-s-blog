@@ -90,8 +90,12 @@ background-size: cover;
   }
   
   a:hover{
-    color: #000;
+    color: #890E2A;
     text-decoration: none;
+  }
+  .btn-red{
+    background-color: #890E2A;
+    color: #fff;
   }
   
   .admin-h1{
@@ -251,15 +255,18 @@ background-repeat: no-repeat;
   padding: 28px;
 }
 .home-header{
-  height: 70vh;
+  height: 80vh;
   background-image:url('http://source.unsplash.com/OJX7gIU3E6U');
 background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 background-color:#323232;
 }
+.nav-color{
+  color: #fff;
+}
    .header-h1{
-            line-height: 40vh;
+            line-height: 50vh;
             color: #fff;
             text-align: center;
             font-style: italic; 
@@ -267,7 +274,7 @@ background-color:#323232;
         footer{
           text-align: center;
           padding: 1em;
-          background-color:#323232;
+          background-color:#890E2A;
         }
           
           .footer-p{
@@ -277,7 +284,7 @@ background-color:#323232;
           }
           
           .footer-h1{
-              color: #2F2F2F;;
+              color: #941e39;
           }
 
           .rm-brand{
