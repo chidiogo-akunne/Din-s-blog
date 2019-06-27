@@ -163,8 +163,8 @@ $('#submitComment').on('click', function(e) {
       data: newData,
       success: function(newComment) {
         $('#commentSection').append($('<span>')
-        .append($('<p class="comment-author">').append(comment.readerid))
-        .append($('<p class="comment-content">').append(comment.commentbody))
+        .append($('<p class="comment-author">').append(newComment.readerid))
+        .append($('<p class="comment-content">').append(newComment.commentbody))
         .append($('<p class="comm-hr">').append('<hr/>'))
       )
       }
@@ -287,7 +287,7 @@ function getPostData() {
       dataType: 'json',
       success: function(post) {
           $('#singlePost').append($('<div>')
-          .append($('<h2>').append(`
+          .append($('<h1 class="text-center comm-h1">').append(`
               <span>${post.title}</span>
           `))
           .append($('<p>').append(`

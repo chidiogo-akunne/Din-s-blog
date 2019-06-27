@@ -14,9 +14,9 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     </head>
-    <body onload="getSinglePost()">
+    <body onload="getSinglePost()" style="background-color: #eaeaea;">
         <header>
-            <div class="rm-brand">Din Blog</div>
+            <div class="rm-brand">Din's Blog</div>
             <div class="rm-header">
               <div class="nav" style="display: inherit;">
                 <a href="index.html">Home</a>
@@ -41,13 +41,13 @@
                               <fieldset>
                                 <div class="form_grp">
                                   <h3 class="comm-h3">Leave a comment</h3>
-                                  <input class="comm-input" type="text" placeholder="name" id="commentername" />
+                                  <input class="comm-input" type="text" placeholder="name" id="commentername" required/>
                                 </div>
                                 <div class="form_grp">
-                                  <textarea id="usercomment" class="comm-textarea" placeholder="Write your comment here."></textarea>        
+                                  <textarea id="usercomment" class="comm-textarea" placeholder="Write your comment here." required></textarea>        
                                 </div>
                                 <div class="form_grp">
-                                <button type="button" class="comm-button" id="submitComment">Submit</button>
+                                <button type="button" class="comm-button btn-red" id="submitComment">Submit</button>
                                 </div>
                               </fieldset>
                             </form>  
