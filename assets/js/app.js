@@ -45,7 +45,7 @@ $(document).ready(function(){
             .append($('<td>').append(`${post.author}`))
             .append($("<td>").append(`
             <button class='deletePost btn-danger' data-id='${post.id}'> Delete</button>
-            <a href="update.html" onclick="goToEdit('${post.id}')" class='editPost noEdit' data-id='${post.id}'> Edit</a>
+            <a href="update.html" onclick="goToEdit('${post.id}')" class='editPost btn-primary' data-id='${post.id}'> Edit</a>
 
           `))
           );
@@ -81,8 +81,8 @@ function createPost(newData) {
             .append($('<td>').append(newPost.description))
             .append($("<td>").append(`
               <button class='deletePost' data-id='${newPost.id}'> Delete</button>
-              <button class='editPost noEdit' data-id='${newPost.id}'> Edit</button>
-            `))
+              <a href="update.html" onclick="goToEdit('${post.id}')" class='editPost btn-primary' data-id='${post.id}'> Edit</a>
+              `))
         )
       }
     });

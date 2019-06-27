@@ -91,7 +91,9 @@ background-size: cover;
     font-size: 1.8em;
     padding: 15px;
   }
-  
+  .btn-primary{
+    padding: 3px 10px;
+  }
   .fa-ul a{
     color: #000;
     font-weight: 500;
