@@ -16,7 +16,12 @@
   .header-style{
     border-bottom: 1px solid #f7f1f3;
   }
-  
+  .about-title{
+    color: #890e2a;
+  }
+  .about-header{
+    background-color: #890e2a;
+  }
   .mainlogin-form{
       margin-top: 100px;
       margin-left: auto;
@@ -228,7 +233,7 @@ background-repeat: no-repeat;
   width: 100px;
 }
 .text_custom {
-  color: #00bd2a;
+  color: #890e2a;
 }
 
 .about_icon i {
@@ -239,8 +244,7 @@ background-repeat: no-repeat;
   display: inline-block;
   background: #fff;
   border-radius: 35px;
-  color: #00bd2a;
-  box-shadow: 0 8px 20px -2px rgba(158, 152, 153, 0.5);
+  color: #890E2A;
 }
 
 .about_header_main .about_heading {
