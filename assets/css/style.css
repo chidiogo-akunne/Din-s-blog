@@ -45,9 +45,9 @@
     }
 .login-btn{
 font-size: 16px;
-background: linear-gradient(#252f75 5%, #4854a5 100%);
-border: 1px solid #4854a5;
-color: #f5f3ee;
+background: linear-gradient(#890e2a 5%, #890e2a 100%);
+border: 1px solid #890e2a;
+color: #fff;
 font-weight: bold;
 cursor: pointer;
 width: 50%;
@@ -56,11 +56,12 @@ padding: 10px 0;
 outline:none;
 margin-bottom: 10px;
 }
-.login-btn{
-background: linear-gradient(#252f75 5%, #4854a5 100%);
+.login-color{
+  color: #890E2A;
 }
+
 .login-bg {
-background-color: #e4dede;
+background-color: #eaeaea;
 height: auto;
 opacity: 0.8;
 background-position: center; 
