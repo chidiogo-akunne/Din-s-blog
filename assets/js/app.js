@@ -3,14 +3,14 @@ function validatelogin(){
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
     if (username && password){
-    alert ("Login successfully");
-    window.location = "admin.html"; 
-    return false;
-    }
-    else{
-    alert("Fill in all input");
-    }
-}
+      alert ("login successfully");
+      window.location = "admin.html"; 
+      return false;
+      }
+      else{
+      alert("Fill in all input");
+      }
+  }
 
 // signup validation
 function validatesignup(){
@@ -182,7 +182,7 @@ $.ajax({
       $('#allPost').append($('<div class="card-deck container mt-5 mb-5">')
       .append($('<div class="card">')
         .append(`
-              <img alt="picture" src="https://image.freepik.com/free-vector/dark-background-overlap-layer-with-silver-glitters_67845-307.jpg" width="100%" height="150px">
+              <img alt="picture" src="https://cdn.pixabay.com/photo/2019/04/10/17/01/watercolour-4117519__340.png" width="100%" height="150px">
         <div class="card-body">
           <h4 class="card-title">${post.title}</h4>
           <h6 class="card-author">${post.author}</h6>
@@ -193,7 +193,7 @@ $.ajax({
   `))
   .append($('<div class="card">')
         .append(`
-              <img alt="picture" src="https://image.freepik.com/free-vector/dark-background-overlap-layer-with-silver-glitters_67845-307.jpg" width="100%" height="150px">
+              <img alt="picture" src="https://cdn.pixabay.com/photo/2017/04/20/13/24/greeting-card-2245717__340.png" width="100%" height="150px">
         <div class="card-body">
           <h4 class="card-title">${post.title}</h4>
           <h6 class="card-author">${post.author}</h6>
@@ -204,7 +204,7 @@ $.ajax({
   `))
   .append($('<div class="card">')
         .append(`
-              <img alt="picture" src="https://image.freepik.com/free-vector/dark-background-overlap-layer-with-silver-glitters_67845-307.jpg" width="100%" height="150px">
+              <img alt="picture" src="https://cdn.pixabay.com/photo/2016/03/17/23/07/abstract-1264071__340.png" width="100%" height="150px">
         <div class="card-body">
           <h4 class="card-title">${post.title}</h4>
           <h6 class="card-author">${post.author}</h6>
@@ -244,7 +244,10 @@ function getPostData() {
     let data = {
       title: $('#editTitle1').val(),
       author:  $('#editAuthor1').val(),
-      description:  $('editDescription1').val()
+      description:  $('editDescription1').val(),
+      content1:  $('content1').val(),
+      content2:  $('content2').val()
+
     }
 
   
