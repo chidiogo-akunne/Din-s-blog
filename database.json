@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Welcome Post",
+      "author": "Din",
+      "description": "Hi! This is my first post here.",
+      "content1": "Congue nisi vitae suscipit tellus mauris a. In nisl nisi scelerisque eu. Enim praesent elementum facilisis leo vel. Egestas purus viverra accumsan in nisl nisi scelerisque eu. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget. Egestas congue quisque egestas diam in arcu. Sodales ut etiam sit amet nisl purus. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. Scelerisque felis imperdiet proin fermentum leo vel orci. Urna neque viverra justo nec ultrices dui sapien eget. Commodo elit at imperdiet dui.",
+      "content2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique risus nec feugiat in. Commodo nulla facilisi nullam vehicula. Fusce id velit ut tortor pretium viverra suspendisse potenti nullam. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget. Est ultricies integer quis auctor elit sed vulputate mi sit. A iaculis at erat pellentesque adipiscing. Quisque egestas diam in arcu cursus euismod quis viverra. Fermentum leo vel orci porta non pulvinar neque. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. Magna ac placerat vestibulum lectus mauris. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Sit amet massa vitae tortor condimentum lacinia. Leo in vitae turpis massa. Id diam maecenas ultricies mi eget. Quam lacus suspendisse faucibus interdum posuere. Eget egestas purus viverra accumsan."
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "message": "some comment",
+      "name": "chidiogo",
+      "email": "chi@gmail.com",
+      "number": 43546576879
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "commentbody": "some comment",
+      "readerid": "din"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
